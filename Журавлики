@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+
+
+public class Main {
+
+    public static void main(String[] argv) throws IOException {
+        new Main().run();
+    }
+
+    PrintWriter pw;
+    Scanner sc;
+
+    public void run() throws IOException {
+        sc = new Scanner(new File("input.txt"));
+        pw = new PrintWriter(new File("output.txt"));
+        int a = sc.nextInt();
+        int i = a / 6;
+        int b = a-(i*2);
+        pw.print(i + " " + b + " " + i);
+
+        pw.close();
+    }
+}
